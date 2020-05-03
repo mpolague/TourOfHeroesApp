@@ -1,6 +1,7 @@
 <!--This will display the hero-->
 
 <h2>My Heroes</h2>
+
 <ul class = "heroes">
     <!--The '*ngFor will list all heroes. '*ngFor' is an Angular's repeater directive-->
     <li *ngFor="let hero of heroes" 
@@ -10,14 +11,4 @@
     </li>
 </ul>
 
-<!--This is the details area-->
-<div *ngIf="selectedHero"> <!--if selectedHero is undefined, the ngIf removes the hero detail from the DOM-->
-
-    <h2>{{selectedHero.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{selectedHero.id}}</div>
-    <div>
-        <label>name:
-            <input [(ngModel)]="selectedHero.name" placeholder="name"/>
-        </label>
-    </div>
-</div>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail> <!--This is an Angular property binding-->

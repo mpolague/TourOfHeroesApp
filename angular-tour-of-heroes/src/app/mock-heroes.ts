@@ -2,6 +2,7 @@ import { Hero } from './hero';
 
 export const HEROES: Hero[] = [
     //HEROES is a constant array of 10 heroes
+    //heroes list below
     {id: 11, name: 'Dr Nice'},
     {id: 12, name: 'Narco'},
     {id: 13, name: 'Bombasto'},
@@ -12,4 +13,5 @@ export const HEROES: Hero[] = [
     {id: 18, name: 'Dr IQ'},
     {id: 19, name: 'Magma'},
     {id: 20, name: 'Tornado'}
+    
 ]

@@ -19,8 +19,12 @@ export class HeroesComponent implements OnInit {
     this.selectedHero = hero;
   }
 
-  getHeroes(): void{
-    this.heroes = this.heroService.getHeroes(); //this will retrieve the heroes from the service
+  getHeroes(): void {
+    //waits for the Observable to emit the array of heroes
+    //the subscribe() method passes the emitted array to the callback -> which sets the component's
+    //heroes properties
+    this.heroService.getHeroes()
+    .subscribe(heroes => this.heroes = heroes);
   }
 
   //The 'ngOnInit' is a lifecycle hook. Angular will call 'ngOnInit' after creating a component

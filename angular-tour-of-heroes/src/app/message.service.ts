@@ -14,5 +14,4 @@ export class MessageService {
   clear(){ //clears the cache
     this.messages = [];
   }
-  constructor() { }
 }

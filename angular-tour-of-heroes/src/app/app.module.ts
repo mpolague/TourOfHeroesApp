@@ -10,6 +10,8 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component'; //<-- NgModel lives here
 
+import { HttpClientModule } from '@angular/common/http'; //HttpClient is Angular's mechanism for communicating with a remote server over HTTP
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,8 @@ import { DashboardComponent } from './dashboard/dashboard.component'; //<-- NgMo
   imports: [
     BrowserModule,
     FormsModule, //this contains a list of external modules that the app needs
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,8 +5,9 @@ import { Observable, of } from 'rxjs'; //this is meant to simulate getting data 
 import { MessageService } from './message.service';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root' 
 })
+
 export class HeroService {
   
   constructor(private messageService: MessageService) { } //Angular will inject the singleton MessageService into that property when it 

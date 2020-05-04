@@ -11,20 +11,14 @@ import { MessageService } from '../message.service';
   styleUrls: ['./heroes.component.css'] //the location of the component's private CSS styles
 })
 export class HeroesComponent implements OnInit {
-  selectedHero: Hero;
   heroes: Hero[];
 
-  constructor(private heroService: HeroService, private messageService: MessageService) {   } //identifies it as a HeroService injection site
+  constructor(private heroService: HeroService) {   } //identifies it as a HeroService injection site
 
   //The 'ngOnInit' is a lifecycle hook. Angular will call 'ngOnInit' after creating a component
   //it is meant for a good place to put initialization logic
   ngOnInit(): void {
     this.getHeroes();
-  }
-
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.add(`HeroService: Selected hero id=${hero.id}`); //the '`' at the end is not a '''
   }
 
   getHeroes(): void {
